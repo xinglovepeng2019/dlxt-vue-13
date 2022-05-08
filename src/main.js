@@ -12,6 +12,13 @@ axios.defaults.baseURL = 'http://www.liulongbin.top:3006';
 Vue.prototype.$axios = axios
 
 
+// 全局指令
+Vue.directive('gfocus', {
+  inserted (e) {
+    e.focus()
+  }
+})
+
 Vue.config.productionTip = false
 
 new Vue({
