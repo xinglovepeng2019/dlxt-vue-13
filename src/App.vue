@@ -1,19 +1,11 @@
 <template>
   <div>
-    <!-- <more></more> -->
-    <move></move>
-    <hr />
-    <tick></tick>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import More from './components/More.vue'
-import Move from './components/Move.vue'
-import Tick from './components/Tick.vue'
-export default {
-  components: { More, Move, Tick },
-}
+export default {}
 </script>
 
 <style scoped></style>
