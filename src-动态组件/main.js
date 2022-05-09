@@ -1,7 +1,6 @@
 import Vue from 'vue'
 // 根组件
 import App from './App.vue'
-// 导入路由对象
 import router from './router'
 import store from './store'
 
@@ -23,7 +22,6 @@ Vue.directive('gfocus', {
 Vue.config.productionTip = false
 
 new Vue({
-  // 把路由对象注入到vue实例中   在任何一个组件中就可以使用路由对象
   router,
   store,
   // 渲染根组件
