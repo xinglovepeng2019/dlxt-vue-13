@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <div class="wrap">
-      <router-link to="/">首页</router-link>
-      <router-link to="/part">part</router-link>
-      <router-link to="/find">发现</router-link>
-    </div>
-    <!-- 路由出口 -->
+  <div class="one">
+    <ul>
+      <li>
+        <router-link to="/find">发现音乐</router-link>
+      </li>
+      <li>
+        <router-link to="/my">我的音乐</router-link>
+      </li>
+    </ul>
     <router-view></router-view>
   </div>
 </template>
@@ -15,13 +17,12 @@ export default {}
 </script>
 
 <style scoped>
-/* 模糊匹配   /part 中有 / */
-.router-link-active {
-  color: red;
+.one {
 }
-
-/* 精确匹配 */
-.router-link-exact-active {
-  background-color: yellow;
+.one ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 </style>

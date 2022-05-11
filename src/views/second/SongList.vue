@@ -1,5 +1,5 @@
 <template>
-  <div>part</div>
+  <div>歌单</div>
 </template>
 
 <script>

@@ -4,11 +4,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 
-import Home from '../views/Home.vue'
-import Part from '../views/Part.vue'
-import Find from '../views/Find.vue'
+// import Find from '../views/Find.vue'
+// import My from '../views/My.vue'
 
-import NotFound from '../views/NotFound'
+// import Ranking from '../views/second/Ranking.vue'
+// import Recommend from '../views/second/Recommend.vue'
+// import SongList from '../views/second/SongList.vue'
+
 
 // 在vue中，使用vue的插件，都需要调用vue.use()
 Vue.use(VueRouter)
@@ -16,33 +18,36 @@ Vue.use(VueRouter)
 // 创建路由规则  一一对应关系
 const routes = [
   {
-    path: '/',   //路由地址
-    redirect:'/find',
-    component:Home
+    path: "/find",
+    // 路由按需加载
+    component: ()=>import('../views/Find.vue'),
+    children: [
+      {
+        path: 'ranking',
+        component:()=>import('../views/second/Ranking.vue')
+      },
+      {
+        path: 'recommend',
+        component:()=>import('../views/second/Recommend.vue')
+      },
+      {
+        path: 'songlist',
+        component:()=>import('../views/second/SongList.vue')
+      }
+    ]
   },
   {
-    path: '/part',   //路由地址
-    component:Part
-  },
-  {
-    path: '/find',   //路由地址
-    component:Find
-  },
-  // {
-  //   path: '*',  //匹配的是所有的路由
-  //   redirect:'/'   //重定向
-  // }
-  {
-    path: '*',   //路由地址
-    component:NotFound
-  },
+    path: "/my",
+    component:()=>import('../views/My.vue')
+   }
 ]
 
 // 创建路由对象  router
 const router = new VueRouter({
   // 路由规则
   // routes:routes
-  routes
+  routes,
+  mode:'history'//打包上线后需要后台支持  模式是hash
 })
 
 // 暴露路由对象
