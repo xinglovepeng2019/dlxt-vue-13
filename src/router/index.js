@@ -18,40 +18,27 @@ Vue.use(VueRouter)
 // 创建路由规则  一一对应关系
 const routes = [
   {
-    path: "/find",
+    path: "/",
     // 路由按需加载
-    component: ()=>import('../views/Find.vue'),
+    redirect:'/goodlist',
+    component: () => import('../views/Home.vue'),
     children: [
       {
-        path: 'ranking',
-        component:()=>import('../views/second/Ranking.vue')
+        path: 'goodlist',
+        component:() => import('../views/MyGoodList.vue')
       },
       {
-        path: 'recommend',
-        component:()=>import('../views/second/Recommend.vue')
+        path: 'goodsearch',
+        component:() => import('../views/MyGoodSearch.vue')
       },
       {
-        path: 'songlist',
-        component:()=>import('../views/second/SongList.vue')
+        path: 'userinfo',
+        component:() => import('../views/MyUserinfo.vue')
       }
+
     ]
   },
-  // {
-  //   path: "/my",
-  //   component: () => import('../views/My.vue'),
-  //   beforeEnter:(to, from, next)=> {
-  //     // 判断是否登录
-  //     next()
-  //   }
-  //  }
-  {
-    path: "/my",
-    component: () => import('../views/My.vue')
-  },
-  {
-    path: '/detail/:id',
-    component:()=>import('../views/Detail.vue')
-  }
+
 ]
 
 // 创建路由对象  router
@@ -63,26 +50,6 @@ const router = new VueRouter({
 })
 
 
-// 路由守卫
-
-// // 路由跳转之前先执行这里  决定是否跳转
-// // 例子 判断用户是否登录，是否决定去  /my
-// let isLogin = false;  //登录状态
-// router.beforeEach((to, from, next) => {
-//     /* 
-//      参数1：要跳转到的路由
-//      参数2： 从哪里跳转的路由
-//      参数3： 函数体  --next()才会让路由正常的跳转切换，next(false) 在原地停留 next('路由地址')
-//      不调用next 页面留在原地
-//     */
-  
-//   if (to.path === '/my' && isLogin === false) {
-//     alert("请登录")
-//     next(false)  //阻止路由跳转
-//   } else {
-//     next()
-//   }
-// })
 
 // 暴露路由对象
 export default router

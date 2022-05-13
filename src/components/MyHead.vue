@@ -1,9 +1,9 @@
 <template>
-  <div>推荐</div>
+  <div>MyHead.vue</div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style scoped></style>
+<style lang="less" scoped></style>

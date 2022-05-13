@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1046066",
+      "name": "双列列表",
+      "font_class": "shuanglieliebiao",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    },
+    {
+      "icon_id": "13087849",
+      "name": "信息bar_账户",
+      "font_class": "xinxibar_zhanghu",
+      "unicode": "e7c8",
+      "unicode_decimal": 59336
+    },
+    {
+      "icon_id": "27704747",
+      "name": "查询",
+      "font_class": "a-16-23_fuzhi-02",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}

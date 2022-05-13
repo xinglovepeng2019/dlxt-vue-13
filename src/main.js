@@ -4,14 +4,15 @@ import App from './App.vue'
 // 导入路由对象
 import router from './router'
 import store from './store'
-
+import 'bootstrap/dist/css/bootstrap.css'
+import './assets/font/iconfont.css'
 import axios from 'axios'
 
 import { Button } from 'vant';
 
 Vue.use(Button);
 
-axios.defaults.baseURL = 'http://www.liulongbin.top:3006';
+axios.defaults.baseURL = '';
 
 // 挂载到Vue原型上  任何一个组件都可以调用Vue原型上的$axios属性
 Vue.prototype.$axios = axios

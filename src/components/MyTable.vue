@@ -1,9 +1,9 @@
 <template>
-  <div>歌单</div>
+  <div>MyTable.vue</div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style scoped></style>
+<style lang="less" scoped></style>
