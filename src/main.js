@@ -12,13 +12,16 @@ import { Button } from 'vant';
 
 Vue.use(Button);
 
-axios.defaults.baseURL = '';
+// axios.defaults.baseURL = 'https://applet-base-api-t.itheima.net/';
+axios.defaults.baseURL="https://www.escook.cn/"
+
 
 // 挂载到Vue原型上  任何一个组件都可以调用Vue原型上的$axios属性
 Vue.prototype.$axios = axios
 
 
 // 全局指令
+// 自定义指令--自动获取焦点
 Vue.directive('gfocus', {
   inserted (e) {
     e.focus()
