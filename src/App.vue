@@ -1,5 +1,6 @@
 <template>
   <div class="one">
+    <div class="header">123header</div>
     <router-view></router-view>
   </div>
 </template>
